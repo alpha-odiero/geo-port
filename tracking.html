@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Shipments - GeoPort Logistics Hub</title>
+  <link class="stylesheet" rel="stylesheet" href="/css/style.css">
+  <link class="stylesheet" rel="stylesheet" href="/css/responsive.css">
+  <style>
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .spinner {
+      animation: spin 1s linear infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP HEADER BAR -->
+  <header class="top-header">
+    <div class="container">
+      <div class="top-header-left">
+        <a href="mailto:info@geoportlogistics.com"><i data-lucide="mail" style="width:14px;height:14px;"></i> info@geoportlogistics.com</a>
+        <span><i data-lucide="phone" style="width:14px;height:14px;"></i> +254 712 345678</span>
+      </div>
+      <div class="top-header-right">
+        <div class="top-header-links">
+          <a href="/careers.html">Careers</a>
+          <span>|</span>
+          <a href="/faq.html">Terms & Conditions</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook" style="width:14px;height:14px;"></i></a>
+          <a href="#" aria-label="Twitter"><i data-lucide="twitter" style="width:14px;height:14px;"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:14px;height:14px;"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN NAVIGATION BAR -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="/index.html" class="logo">
+        <div class="logo-icon"></div>
+        GeoPort<span>Logistics</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="/index.html" class="nav-link">Home</a></li>
+        <li><a href="/about.html" class="nav-link">About</a></li>
+        <li><a href="/services.html" class="nav-link">Services</a></li>
+        <li class="nav-item-dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Pages <i data-lucide="chevron-down" style="width:12px;height:12px;display:inline;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/fleet.html">Our Fleet</a></li>
+            <li><a href="/warehouse.html">Warehouse Solutions</a></li>
+            <li><a href="/projects.html">Featured Projects</a></li>
+            <li><a href="/gallery.html">Photo Gallery</a></li>
+            <li><a href="/careers.html">Company Careers</a></li>
+            <li><a href="/faq.html">Help & FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog.html" class="nav-link">Blog</a></li>
+        <li><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-right-actions">
+        <a href="/tracking.html" class="btn btn-track active"><i data-lucide="map-pin" style="width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-right:2px;"></i> Track Order</a>
+        <button class="hamburger" aria-label="Toggle navigation drawers">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- INNER HERO BANNER -->
+  <section class="inner-hero" style="background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1600&auto=format&fit=crop');">
+    <div class="inner-hero-overlay"></div>
+    <div class="container">
+      <div class="inner-hero-content">
+        <h1>Track Your Cargo</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- BASE TRACKING INTERNALS -->
+  <section class="section section-bg-light">
+    <div class="container">
+      <div class="tracking-wrapper">
+        <span class="subtitle" style="text-transform:uppercase; color:var(--secondary); font-weight:700; font-size:0.9rem; letter-spacing:1px; display:block; text-align:center;">Shipment Identification</span>
+        <h2 style="text-align: center; margin-bottom: 30px;">Continuous Freight Tracker</h2>
+        <p style="text-align: center; max-width: 500px; margin: 0 auto 30px auto;">Enter your 8-digit tracking number (e.g., <strong>GP123456</strong>) in the field below to query current satellite positioning and terminal status.</p>
+
+        <div class="tracking-search-bar">
+          <input type="text" id="tracking-number-input" class="form-control" placeholder="Enter tracking code (try: GP123456)" required aria-label="Tracking Number Input Field">
+          <button type="button" id="btn-track-submit" class="btn btn-primary" style="padding:12px 30px;"><i data-lucide="search" style="width:16px;height:16px;display:inline-block;vertical-align:-2px;margin-right:4px;"></i> Track</button>
+        </div>
+
+        <!-- Elegant Loading State Container -->
+        <div id="tracking-loader" style="display:none; text-align:center; padding:40px 20px; background:#ffffff; border:1px solid #e2e8f0; border-radius:var(--border-radius); margin-bottom:25px; box-shadow:var(--shadow-sm);">
+          <div class="spinner" style="width:40px; height:40px; border:4px solid #edf2f7; border-top:4px solid var(--secondary); border-radius:50%; margin:0 auto 15px auto;"></div>
+          <p id="tracking-loader-text" style="font-weight:600; color:var(--primary); font-size:1rem; margin-bottom:5px;">Connecting to secure logistics system...</p>
+          <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">Retrieving real-time positioning metrics & customs certificates</p>
+        </div>
+
+        <!-- Refined Error Message/Alert Card -->
+        <div id="tracking-error-box" style="display:none; margin-bottom: 25px; background: #fff5f5; border: 1px solid #fed7d7; border-left: 5px solid #e53e3e; border-radius: var(--border-radius); padding: 20px; box-shadow: var(--shadow-sm);">
+          <div style="display:flex; align-items:flex-start; gap:12px;">
+            <div style="background:#fed7d7; border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e53e3e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-alert-triangle"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div style="flex-grow:1;">
+              <h4 style="margin:0 0 4px 0; color:#9b2c2c; font-size:1.05rem; font-weight:700;">Tracking Enquiry Unresolved</h4>
+              <p id="tracking-error-message" style="margin:0; font-size:0.9rem; color:#c53030; line-height:1.4;">The requested shipment ticket could not be found. Please check spelling or consult your booking receipt reference.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Positive Result Container -->
+        <div id="tracking-result-box" class="tracking-result-box">
+          <div class="result-header">
+            <div>
+              <p style="font-size:0.8rem; font-weight:700; margin-bottom:2px; text-transform:uppercase; color:var(--text-muted);">Tracking Number</p>
+              <h3 id="res-tracking-id" style="color:var(--primary); font-size:1.6rem; font-family:var(--font-mono); font-weight:700;">GP123456</h3>
+            </div>
+            <div>
+              <span id="res-status" class="tracking-status-badge">In Transit</span>
+            </div>
+          </div>
+
+          <div class="tracking-node-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; border-bottom:1px solid #eee; padding-bottom:20px;">
+            <div>
+              <p style="font-size:0.8rem; font-weight:700; margin-bottom:2px; text-transform:uppercase; color:var(--text-muted);">Current Location</p>
+              <p id="res-location" style="font-weight:600; color:var(--primary); margin-bottom:0;">Nairobi Hub (Sorting)</p>
+            </div>
+            <div>
+              <p style="font-size:0.8rem; font-weight:700; margin-bottom:2px; text-transform:uppercase; color:var(--text-muted);">Expected Delivery</p>
+              <p id="res-delivery" style="font-weight:600; color:var(--primary); margin-bottom:0;">Tomorrow (End of Day)</p>
+            </div>
+          </div>
+
+          <!-- Transit Timelines (Hydrated Dynamically via script) -->
+          <div id="res-timeline" class="tracking-timeline">
+            <!-- Node 1 -->
+            <div class="tracking-node">
+              <div class="tracking-dot"></div>
+              <div class="tracking-node-info">
+                <h4>In Transit - Nairobi Customs Hub</h4>
+                <p>Checked into the warehouse clearing and transit sorting terminal. Transit safe.</p>
+              </div>
+            </div>
+            <!-- Node 2 -->
+            <div class="tracking-node">
+              <div class="tracking-dot"></div>
+              <div class="tracking-node-info">
+                <h4>Freight Sorted - Mombasa Seaport</h4>
+                <p>Shipment unloaded from Pac Mariner Vessel and dispatched via express container highway.</p>
+              </div>
+            </div>
+            <!-- Node 3 -->
+            <div class="tracking-node upcoming">
+              <div class="tracking-dot"></div>
+              <div class="tracking-node-info">
+                <h4>Pending - Destination Assembly Yard</h4>
+                <p>Final warehouse sorting and local dispatch scheduled.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE ADMIN CONTROL CENTER SECTION -->
+  <section class="section" style="background-color:var(--white); border-top: 1px solid #eee;">
+    <div class="container">
+      <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+        <span class="subtitle" style="text-transform:uppercase; color:var(--accent); font-weight:700; font-size:0.9rem; letter-spacing: 1px; display: block; margin-bottom: 8px;">Operational Metrics</span>
+        <h2>Live Control Center</h2>
+        <p style="margin-bottom: 30px; color: var(--text-muted);">Access consolidated backend indicators such as total registered users, shipment logs, pending quote queries, and marketing subscribers in real-time.</p>
+        
+        <!-- Login Form Trigger -->
+        <div id="admin-login-wrapper" style="margin-top:20px; background:#f9f9f9; padding:25px; border-radius:4px; box-shadow:var(--shadow-sm); border:1px solid #eee; text-align:left;">
+          <h4 style="margin-top:0; margin-bottom:15px; text-align:center; color:var(--primary); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.5px;">Authorized Personnel Login</h4>
+          <form id="admin-login-form">
+            <div class="form-group" style="margin-bottom:15px;">
+              <label style="display:block; font-size:0.8rem; font-weight:700; margin-bottom:5px; text-transform:uppercase; color:var(--primary); letter-spacing: 0.5px;">Admin Email</label>
+              <input type="email" id="admin-email" class="form-control" value="admin@geoportlogistics.com" required autocomplete="email" style="width: 100%;">
+            </div>
+            <div class="form-group" style="margin-bottom:15px;">
+              <label style="display:block; font-size:0.8rem; font-weight:700; margin-bottom:5px; text-transform:uppercase; color:var(--primary); letter-spacing: 0.5px;">Secure Token/Password</label>
+              <input type="password" id="admin-password" class="form-control" value="admin123" required autocomplete="current-password" style="width: 100%;">
+            </div>
+            <div id="admin-login-err" class="form-success-message" style="background-color:var(--accent); display:none; margin-bottom:15px; padding: 10px; font-weight: 500;"></div>
+            <button type="submit" class="btn btn-primary" style="width:100%; padding:12px; font-weight: 600;">Query Control Stats</button>
+          </form>
+          <p style="font-size:0.75rem; text-align:center; color:var(--text-muted); margin-bottom: 0; margin-top:10px;">Authorized profile seeded: <code>admin@geoportlogistics.com</code> / <code>admin123</code></p>
+        </div>
+
+        <!-- Dashboard Display Wrapper -->
+        <div id="admin-dashboard-stats-wrapper" style="display:none; margin-top:20px; background:#fafafa; padding:30px; border-radius:4px; border:1px solid #e2e8f0; text-align:left; box-shadow:var(--shadow-sm);">
+          <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:15px; margin-bottom:20px;">
+            <h4 style="margin:0; color:var(--primary); text-transform:uppercase; font-size: 1rem; letter-spacing: 0.5px;"><i data-lucide="shield" style="width:16px;height:16px;display:inline-block;vertical-align:-2px;margin-right:5px;color:var(--secondary);"></i> Live DB System Metrics</h4>
+            <button id="btn-admin-logout" style="background:transparent; border:none; color:var(--accent); font-weight:600; cursor:pointer; font-size:0.85rem; text-transform: uppercase;">Logout</button>
+          </div>
+          <div class="stats-panel-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+            <div style="background:white; padding:15px; border-radius:4px; border:1px solid #edf2f7; text-align:center; box-shadow: var(--shadow-sm);">
+              <span style="font-size:0.75rem; color:var(--text-muted); font-weight:700; text-transform:uppercase; display: block; margin-bottom: 5px;">Registered Users</span>
+              <h2 id="stats-users-val" style="color:var(--primary); font-size:2rem; margin:0; font-weight: 700;">0</h2>
+            </div>
+            <div style="background:white; padding:15px; border-radius:4px; border:1px solid #edf2f7; text-align:center; box-shadow: var(--shadow-sm);">
+              <span style="font-size:0.75rem; color:var(--text-muted); font-weight:700; text-transform:uppercase; display: block; margin-bottom: 5px;">Shipments Logs</span>
+              <h2 id="stats-shipments-val" style="color:var(--primary); font-size:2rem; margin:0; font-weight: 700;">0</h2>
+            </div>
+            <div style="background:white; padding:15px; border-radius:4px; border:1px solid #edf2f7; text-align:center; box-shadow: var(--shadow-sm);">
+              <span style="font-size:0.75rem; color:var(--text-muted); font-weight:700; text-transform:uppercase; display: block; margin-bottom: 5px;">Quote Requests</span>
+              <h2 id="stats-quotes-val" style="color:var(--primary); font-size:2rem; margin:0; font-weight: 700;">0</h2>
+            </div>
+            <div style="background:white; padding:15px; border-radius:4px; border:1px solid #edf2f7; text-align:center; box-shadow: var(--shadow-sm);">
+              <span style="font-size:0.75rem; color:var(--text-muted); font-weight:700; text-transform:uppercase; display: block; margin-bottom: 5px;">Newsletter Subs</span>
+              <h2 id="stats-subscribers-val" style="color:var(--primary); font-size:2rem; margin:0; font-weight: 700;">0</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <a href="/index.html" class="logo" style="color:var(--white); margin-bottom:15px;">
+            <div class="logo-icon">G</div>
+            GeoPort<span style="color:var(--secondary);">Logistics</span>
+          </a>
+          <p>Empowering businesses globally with highly durable transit networks and intelligent logistics storage solutions.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Navigation</h4>
+          <ul>
+            <li><a href="/index.html"><i data-lucide="chevron-right" style="width:14px;"></i> Home</a></li>
+            <li><a href="/about.html"><i data-lucide="chevron-right" style="width:14px;"></i> About Company</a></li>
+            <li><a href="/services.html"><i data-lucide="chevron-right" style="width:14px;"></i> Services</a></li>
+            <li><a href="/fleet.html"><i data-lucide="chevron-right" style="width:14px;"></i> Fleet Details</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Utility Services</h4>
+          <ul>
+            <li><a href="/services.html"><i data-lucide="chevron-right" style="width:14px;"></i> Road Cargo</a></li>
+            <li><a href="/services.html"><i data-lucide="chevron-right" style="width:14px;"></i> Sea & Ocean Transit</a></li>
+            <li><a href="/warehouse.html"><i data-lucide="chevron-right" style="width:14px;"></i> Storage Depot</a></li>
+            <li><a href="/tracking.html"><i data-lucide="chevron-right" style="width:14px;"></i> Track Location</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Sign up to receive our monthly logistics trend updates and terminal freight announcements.</p>
+          <form class="newsletter-form">
+            <input type="email" class="form-control" placeholder="Enter email address" required aria-label="Newsletter input for subscriber email address">
+            <button type="submit" class="btn btn-secondary"><i data-lucide="send" style="width:16px;height:16px;"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 GeoPort Logistics. All Rights Reserved. Coordinated safely worldwide.</p>
+        <div class="footer-bottom-links">
+          <a href="/faq.html">Terms of Service</a>
+          <span>&middot;</span>
+          <a href="/faq.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-to-top"><i data-lucide="arrow-up"></i></div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+  <script type="module" src="/js/main.js" defer></script>
+  <script type="module" src="/js/tracking.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "GeoPort Logistics",
+  "description": "GeoPort Logistics is a complete, professional logistics and transportation multi-page website featuring real-time layouts, beautiful custom color coordinates, and dedicated service platforms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

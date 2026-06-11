@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Fleet - GeoPort Logistics Hub</title>
+  <link class="stylesheet" rel="stylesheet" href="/css/style.css">
+  <link class="stylesheet" rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+  <!-- TOP HEADER BAR -->
+  <header class="top-header">
+    <div class="container">
+      <div class="top-header-left">
+        <a href="mailto:info@geoportlogistics.com"><i data-lucide="mail" style="width:14px;height:14px;"></i> info@geoportlogistics.com</a>
+        <span><i data-lucide="phone" style="width:14px;height:14px;"></i> +254 712 345678</span>
+      </div>
+      <div class="top-header-right">
+        <div class="top-header-links">
+          <a href="/careers.html">Careers</a>
+          <span>|</span>
+          <a href="/faq.html">Terms & Conditions</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook" style="width:14px;height:14px;"></i></a>
+          <a href="#" aria-label="Twitter"><i data-lucide="twitter" style="width:14px;height:14px;"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:14px;height:14px;"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN NAVIGATION BAR -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="/index.html" class="logo">
+        <div class="logo-icon">G</div>
+        GeoPort<span>Logistics</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="/index.html" class="nav-link">Home</a></li>
+        <li><a href="/about.html" class="nav-link">About</a></li>
+        <li><a href="/services.html" class="nav-link">Services</a></li>
+        <li class="nav-item-dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Pages <i data-lucide="chevron-down" style="width:12px;height:12px;display:inline;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/fleet.html" class="nav-link active">Our Fleet</a></li>
+            <li><a href="/warehouse.html">Warehouse Solutions</a></li>
+            <li><a href="/projects.html">Featured Projects</a></li>
+            <li><a href="/gallery.html">Photo Gallery</a></li>
+            <li><a href="/careers.html">Company Careers</a></li>
+            <li><a href="/faq.html">Help & FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog.html" class="nav-link">Blog</a></li>
+        <li><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-right-actions">
+        <a href="/tracking.html" class="btn btn-track"><i data-lucide="map-pin" style="width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-right:2px;"></i> Track Order</a>
+        <button class="hamburger" aria-label="Mobile Navigation drawer toggle button click">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- INNER HERO BANNER -->
+  <section class="inner-hero" style="background-image: url('https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=1600&auto=format&fit=crop');">
+    <div class="inner-hero-overlay"></div>
+    <div class="container">
+      <div class="inner-hero-content">
+        <h1>Our Transit Fleet</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLEET SHOWCASE & INTERACTIVE FILTERING -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle">Heavy Carrier Equipment</span>
+        <h2>High Capacity Vehicles</h2>
+        <p>We deploy modern transport equipment certified under international safety, energy, and secure cargo guidelines.</p>
+      </div>
+
+      <!-- Filter buttons linking directly with gallery.js -->
+      <div class="projects-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Fleet</button>
+        <button class="filter-btn" data-filter="trucks">Trucks</button>
+        <button class="filter-btn" data-filter="ships">Cargo Ships</button>
+        <button class="filter-btn" data-filter="aviation">Aviation Cargo</button>
+      </div>
+
+      <div class="fleet-grid">
+        <!-- Fleet Card 1: Heavy Semi-Truck -->
+        <article class="project-card-wrapper" data-category="trucks" style="margin-bottom:30px;">
+          <div class="fleet-card">
+            <div class="fleet-img-box">
+              <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=500&auto=format&fit=crop" alt="Heavy semi trailer truck on road">
+            </div>
+            <div class="fleet-content">
+              <h3>Vance Titan Semi</h3>
+              <p>Heavy duty freight haulage designed for trans-continental highway distribution.</p>
+              <ul class="fleet-specs">
+                <li><span>Max Payload:</span> <span>42,000 KG</span></li>
+                <li><span>Engine Power:</span> <span>540 HP Turbo</span></li>
+                <li><span>Fuel Class:</span> <span>Euro 6 Eco</span></li>
+                <li><span>Safety Rating:</span> <span>Class A Secure</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fleet Card 2: Cargo Vessel -->
+        <article class="project-card-wrapper" data-category="ships" style="margin-bottom:30px;">
+          <div class="fleet-card">
+            <div class="fleet-img-box">
+              <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=500&auto=format&fit=crop" alt="Ocean Container Carrier Vessel">
+            </div>
+            <div class="fleet-content">
+              <h3>Pacific Mariner Ocean Carrier</h3>
+              <p>State-of-the-art container vessel managing massive double-stack harbor cargo containers.</p>
+              <ul class="fleet-specs">
+                <li><span>Max Volume:</span> <span>18,500 TEU</span></li>
+                <li><span>Draft Depth:</span> <span>15.5 Meters</span></li>
+                <li><span>Propulsion:</span> <span>Wärtsilä Marine Diesel</span></li>
+                <li><span>Navigation:</span> <span>Satellite GPS Automated</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fleet Card 3: Air Transport -->
+        <article class="project-card-wrapper" data-category="aviation" style="margin-bottom:30px;">
+          <div class="fleet-card">
+            <div class="fleet-img-box">
+              <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=500&auto=format&fit=crop" alt="Cargo jet aircraft carrier">
+            </div>
+            <div class="fleet-content">
+              <h3>Super Hercules Aero Freighter</h3>
+              <p>Wide body high-altitude cargo aircraft configured for rapid medical or express trade delivery.</p>
+              <ul class="fleet-specs">
+                <li><span>Takeoff Load:</span> <span>114,000 KG</span></li>
+                <li><span>Range Capabilities:</span> <span>8,300 Kilometers</span></li>
+                <li><span>Cruise Speed:</span> <span>850 KM/H</span></li>
+                <li><span>Logistics Group:</span> <span>Emergency Express</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fleet Card 4: Standard Express Van -->
+        <article class="project-card-wrapper" data-category="trucks" style="margin-bottom:30px;">
+          <div class="fleet-card">
+            <div class="fleet-img-box">
+              <img src="https://images.unsplash.com/photo-1508974239320-0a029497e820?q=80&w=500&auto=format&fit=crop" alt="City logistics operations box van">
+            </div>
+            <div class="fleet-content">
+              <h3>Urban Sprint Express Van</h3>
+              <p>Highly agile, localized urban logistics sprinter managing final-mile distributions.</p>
+              <ul class="fleet-specs">
+                <li><span>Payload Max:</span> <span>3,500 KG</span></li>
+                <li><span>City Grid Range:</span> <span>Uncapped (Diesel)</span></li>
+                <li><span>Emissions:</span> <span>Euro 6 Standard</span></li>
+                <li><span>Best For:</span> <span>Last-mile Cargo Delivery</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container" style="text-align: center;">
+      <h2 style="color:var(--white); margin-bottom:15px; font-size:2.2rem;">Fleet Bookings & Freight Dispatch</h2>
+      <p style="color:rgba(255,255,255,0.85); margin-bottom:30px; font-size:1.1rem;">Secure our heavy carrier engines to manage your heavy loads or bulk delivery contracts safely.</p>
+      <a href="/contact.html" class="btn btn-secondary">Contact Dispatchers</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <a href="/index.html" class="logo" style="color:var(--white); margin-bottom:15px;">
+            <div class="logo-icon">G</div>
+            GeoPort<span style="color:var(--secondary);">Logistics</span>
+          </a>
+          <p>Empowering businesses globally with highly durable transit networks and intelligent logistics storage solutions.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Navigation</h4>
+          <ul>
+            <li><a href="/index.html"><i data-lucide="chevron-right" style="width:14px;"></i> Home</a></li>
+            <li><a href="/about.html"><i data-lucide="chevron-right" style="width:14px;"></i> About Company</a></li>
+            <li><a href="/services.html"><i data-lucide="chevron-right" style="width:14px;"></i> Services</a></li>
+            <li><a href="/fleet.html"><i data-lucide="chevron-right" style="width:14px;"></i> Fleet Details</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Utility Services</h4>
+          <ul>
+            <li><a href="/services.html"><i data-lucide="chevron-right" style="width:14px;"></i> Road Cargo</a></li>
+            <li><a href="/services.html"><i data-lucide="chevron-right" style="width:14px;"></i> Sea & Ocean Transit</a></li>
+            <li><a href="/warehouse.html"><i data-lucide="chevron-right" style="width:14px;"></i> Storage Depot</a></li>
+            <li><a href="/tracking.html"><i data-lucide="chevron-right" style="width:14px;"></i> Track Location</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Sign up to receive our monthly logistics trend updates and terminal freight announcements.</p>
+          <form class="newsletter-form">
+            <input type="email" class="form-control" placeholder="Enter email address" required aria-label="Newsletter input email address">
+            <button type="submit" class="btn btn-secondary"><i data-lucide="send" style="width:16px;height:16px;"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 GeoPort Logistics. All Rights Reserved. Coordinated safely worldwide.</p>
+        <div class="footer-bottom-links">
+          <a href="/faq.html">Terms of Service</a>
+          <span>&middot;</span>
+          <a href="/faq.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-to-top"><i data-lucide="arrow-up"></i></div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+  <script type="module" src="/js/main.js" defer></script>
+  <script src="/js/gallery.js" defer></script>
+</body>
+</html>

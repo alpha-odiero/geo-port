@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery - GeoPort Logistics Hub</title>
+  <link class="stylesheet" rel="stylesheet" href="/css/style.css">
+  <link class="stylesheet" rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+  <!-- TOP HEADER BAR -->
+  <header class="top-header">
+    <div class="container">
+      <div class="top-header-left">
+        <a href="mailto:info@geoportlogistics.com"><i data-lucide="mail" style="width:14px;height:14px;"></i> info@geoportlogistics.com</a>
+        <span><i data-lucide="phone" style="width:14px;height:14px;"></i> +254 712 345678</span>
+      </div>
+      <div class="top-header-right">
+        <div class="top-header-links">
+          <a href="/careers.html">Careers</a>
+          <span>|</span>
+          <a href="/faq.html">Terms & Conditions</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook" style="width:14px;height:14px;"></i></a>
+          <a href="#" aria-label="Twitter"><i data-lucide="twitter" style="width:14px;height:14px;"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:14px;height:14px;"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN NAVIGATION BAR -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="/index.html" class="logo">
+        <div class="logo-icon">G</div>
+        GeoPort<span>Logistics</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="/index.html" class="nav-link">Home</a></li>
+        <li><a href="/about.html" class="nav-link">About</a></li>
+        <li><a href="/services.html" class="nav-link">Services</a></li>
+        <li class="nav-item-dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Pages <i data-lucide="chevron-down" style="width:12px;height:12px;display:inline;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/fleet.html">Our Fleet</a></li>
+            <li><a href="/warehouse.html">Warehouse Solutions</a></li>
+            <li><a href="/projects.html">Featured Projects</a></li>
+            <li><a href="/gallery.html" class="nav-link active">Photo Gallery</a></li>
+            <li><a href="/careers.html">Company Careers</a></li>
+            <li><a href="/faq.html">Help & FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog.html" class="nav-link">Blog</a></li>
+        <li><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-right-actions">
+        <a href="/tracking.html" class="btn btn-track"><i data-lucide="map-pin" style="width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-right:2px;"></i> Track Order</a>
+        <button class="hamburger" aria-label="Nav toggle selector clicks">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- INNER HERO BANNER -->
+  <section class="inner-hero" style="background-image: url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1600&auto=format&fit=crop');">
+    <div class="inner-hero-overlay"></div>
+    <div class="container">
+      <div class="inner-hero-content">
+        <h1>Company Photo Gallery</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle">Visual Portfolios</span>
+        <h2>Explore Our Interactive Work</h2>
+        <p>A masonry showcase of 50+ real transport, storage, vessel, and bulk shipping pictures from terminals globally. Click any photo to zoom in.</p>
+      </div>
+
+      <!-- Categories filters (matching gallery.js) -->
+      <div class="projects-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="loading">Loading & Cargo</button>
+        <button class="filter-btn" data-filter="transport">Transported</button>
+        <button class="filter-btn" data-filter="delivery">Delivered</button>
+        <button class="filter-btn" data-filter="clients">Happy Clients</button>
+      </div>
+
+      <!-- Professional Logistics Image Mass Grid -->
+      <div class="gallery-grid" id="masonry-lightbox-grid" style="margin-top:40px;">
+
+        <!-- Category: Loading (8 items) -->
+        <div class="gallery-item" data-category="loading">
+          <img src="https://images.unsplash.com/photo-1553413719-875873767665?q=80&w=600&auto=format&fit=crop" alt="Forklift vehicle stacking pallets in depot">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="loading">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600&auto=format&fit=crop" alt="High speed forklift racking in warehouse shelves">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="loading">
+          <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=600&auto=format&fit=crop" alt="Warehouse manager doing digital cargo cataloging">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="loading">
+          <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=600&auto=format&fit=crop" alt="Industrial packaging sorting conveyor system">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="loading">
+          <img src="https://images.unsplash.com/photo-1508974239320-0a029497e820?q=80&w=600&auto=format&fit=crop" alt="Steward loading cardboard cargo load">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="loading">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600&auto=format&fit=crop" alt="Safety operative loading back of shipping truck">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="loading">
+          <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=600&auto=format&fit=crop" alt="Heavy storage floor packaging stack logistics">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="loading">
+          <img src="https://images.unsplash.com/photo-1607344645866-009c320c5ab8?q=80&w=600&auto=format&fit=crop" alt="Secure shipment parcel sealing and branding">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+
+        <!-- Category: Transport (8 items) -->
+        <div class="gallery-item" data-category="transport">
+          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=600&auto=format&fit=crop" alt="Heavy duty semi truck driving on route">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="transport">
+          <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=600&auto=format&fit=crop" alt="Massive container carrier ship in deep oceanic transit">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="transport">
+          <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?q=80&w=600&auto=format&fit=crop" alt="Harbor storage containers yard stack loading">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="transport">
+          <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=600&auto=format&fit=crop" alt="Freight train double stacking logistics cargo across states">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="transport">
+          <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=600&auto=format&fit=crop" alt="Commercial transit cargo dry container stack">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="transport">
+          <img src="https://images.unsplash.com/photo-1519003300449-424ad0405076?q=80&w=600&auto=format&fit=crop" alt="Fleet of logistics freight trucks lined at terminal">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="transport">
+          <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?q=80&w=600&auto=format&fit=crop" alt="Modern long range transport fleet van on road trip">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="transport">
+          <img src="https://images.unsplash.com/photo-1483450388369-9ed95738483c?q=80&w=600&auto=format&fit=crop" alt="Air cargo aircraft flight transit handling">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+
+        <!-- Category: Delivery (7 items) -->
+        <div class="gallery-item" data-category="delivery">
+          <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=600&auto=format&fit=crop" alt="Recipient signing for package on hand courier tablet">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="delivery">
+          <img src="https://images.unsplash.com/photo-1566576912321-d58def7a60d2?q=80&w=600&auto=format&fit=crop" alt="Professional courier handoff package to customer">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="delivery">
+          <img src="https://images.unsplash.com/photo-1526253038957-bce54e05968e?q=80&w=600&auto=format&fit=crop" alt="Smiling shipping courier loading local fulfillment van">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="delivery">
+          <img src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?q=80&w=600&auto=format&fit=crop" alt="Doing barcode scan verification upon final arrival">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="delivery">
+          <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=600&auto=format&fit=crop" alt="Client signing receipt confirmation for delivery batch">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="delivery">
+          <img src="https://images.unsplash.com/photo-1534415678020-e41777f487e8?q=80&w=600&auto=format&fit=crop" alt="Reliable door to door delivery delivery confirmation">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="delivery">
+          <img src="https://images.unsplash.com/photo-1518655061766-48f23ae901f1?q=80&w=600&auto=format&fit=crop" alt="Courier with parcel on clipboard shipment handoff">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+
+        <!-- Category: Clients (8 items) -->
+        <div class="gallery-item" data-category="clients">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600&auto=format&fit=crop" alt="Happy client doing sealing shipping deal handshake">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="clients">
+          <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?q=80&w=600&auto=format&fit=crop" alt="Supply manager handing over delivery package successfully to smiling client">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="clients">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" alt="Pleased commercial client standing in front of office">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="clients">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop" alt="Highly smiling clients briefing on high volume import plan">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="clients">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" alt="Happy female retailer satisfied with express supply fulfillment services">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="clients">
+          <img src="https://images.unsplash.com/photo-1552581234-2612b75d8953?q=80&w=600&auto=format&fit=crop" alt="Logistics team review meeting talking about successful delivery milestones">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="clients">
+          <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=600&auto=format&fit=crop" alt="Pleased digital terminal merchant doing secure commercial payment">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="clients">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop" alt="Strategic corporate logistics partners smiling over global contract signing">
+          <div class="gallery-item-overlay">
+            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <a href="/index.html" class="logo" style="color:var(--white); margin-bottom:15px;">
+            <div class="logo-icon">G</div>
+            GeoPort<span style="color:var(--secondary);">Logistics</span>
+          </a>
+          <p>Empowering businesses globally with highly durable transit networks and intelligent logistics storage solutions.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Navigation</h4>
+          <ul>
+            <li><a href="/index.html"><i data-lucide="chevron-right" style="width:14px;"></i> Home</a></li>
+            <li><a href="/about.html"><i data-lucide="chevron-right" style="width:14px;"></i> About Company</a></li>
+            <li><a href="/services.html"><i data-lucide="chevron-right" style="width:14px;"></i> Services</a></li>
+            <li><a href="/fleet.html"><i data-lucide="chevron-right" style="width:14px;"></i> Fleet Details</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Utility Services</h4>
+          <ul>
+            <li><a href="/services.html"><i data-lucide="chevron-right" style="width:14px;"></i> Road Cargo</a></li>
+            <li><a href="/services.html"><i data-lucide="chevron-right" style="width:14px;"></i> Sea & Ocean Transit</a></li>
+            <li><a href="/warehouse.html"><i data-lucide="chevron-right" style="width:14px;"></i> Storage Depot</a></li>
+            <li><a href="/tracking.html"><i data-lucide="chevron-right" style="width:14px;"></i> Track Location</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Sign up to receive our monthly logistics trend updates and terminal freight announcements.</p>
+          <form class="newsletter-form">
+            <input type="email" class="form-control" placeholder="Enter email address" required aria-label="Newsletter input for subscriber email address">
+            <button type="submit" class="btn btn-secondary"><i data-lucide="send" style="width:16px;height:16px;"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 GeoPort Logistics. All Rights Reserved. Coordinated safely worldwide.</p>
+        <div class="footer-bottom-links">
+          <a href="/faq.html">Terms of Service</a>
+          <span>&middot;</span>
+          <a href="/faq.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-to-top"><i data-lucide="arrow-up"></i></div>
+
+  <!-- Lucide icons and script dependencies -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+  <script type="module" src="/js/main.js" defer></script>
+  <script src="/js/gallery.js" defer></script>
+</body>
+</html>
